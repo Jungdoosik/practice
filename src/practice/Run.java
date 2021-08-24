@@ -7,7 +7,9 @@ public class Run {
 		//rv.testFor();
 		//rv.testWhile();
 		//rv.testDoWhile();
-		rv.testGugudan();
+		//rv.testGugudan();
+		//rv.testBreak();
+		rv.testFor2();
 	}
 
 }
