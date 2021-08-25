@@ -129,5 +129,40 @@ public class Repetitive {
 		}
 		
 	}
-	
+	public void testContinue() {
+		//1~100까지의 합( 3과 5의 배수 제외) 을 출력
+		int sum = 0;
+		for(int i = 1; i <= 100; i++) {
+			if (i% 3 ==0 || i% 5 == 0) {
+				continue;
+			}
+			sum += i;
+		}
+		System.out.println("sum : " + sum);
+	}
+	public void testGugudan2() {
+		//분기문을 이용한 중첩 반복문 구구단
+		
+		//for문으로 구구단 짝수단(2,4,6,8단) 구현
+		for(int i = 2; i < 10; i += 2) {
+			//if(i % 2 == 1) continue;
+			System.out.println("====" + i + "단====");
+			for(int j = 1; j < 10; j++) {
+			    System.out.println(i + "x" + j + "=" + i*j);
+				}
+		}
+	    //while 문으로 구구단 홀수곱만 구현
+		int a = 2;
+		while(a < 10) {
+			System.out.println("====" + a + "단====");
+			int b = 0;
+			while (b < 10) {
+				b++;
+				//if(b % 2 == 0) continue;
+				System.out.println(a + "x" + b + "=" + a*b);
+				}
+			a++;
+		}
+	}
 }
+
