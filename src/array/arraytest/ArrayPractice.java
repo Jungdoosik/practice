@@ -1,5 +1,6 @@
 package array.arraytest;
 
+import java.util.Arrays;
 import java.util.Scanner;
 
 public class ArrayPractice {
@@ -23,7 +24,7 @@ public class ArrayPractice {
 		
 		
 	}
-	public void ArrayPractice2() {
+	public void method2() {
 		Scanner sc = new Scanner(System.in);
 		System.out.print("배열의 크기 : ");
 		String[] strArr = new String[sc.nextInt()];
@@ -31,7 +32,31 @@ public class ArrayPractice {
 		sc.nextLine();
 		
 		for(int i = 0; i < strArr.length; i++) {
-			System.out.println(i+1 +"번째 문자열 : ");
+			System.out.print(i+1 +"번째 문자열 : ");
+			strArr[i] = sc.nextLine();
+		}
+		while(true) {
+			System.out.print("더 값을 입력하시겠습니까? (Y/N)");
+			String select = sc.nextLine();
+			
+			if(select.toUpperCase().equals("Y")) {
+				System.out.print("추가할 개수 : ");
+				int add = sc.nextInt();
+				String[] newArr= new String[strArr.length + add];
+				System.arraycopy(strArr, 0, newArr, 0, strArr.length);
+				
+				sc.nextLine();
+				
+				for(int i = strArr.length; i < newArr.length; i++) {
+					System.out.print(i+1 + "번째 문자열 : ");
+					newArr[i] = sc.nextLine();
+				}
+				
+				strArr = newArr;
+			}else if(select.toUpperCase().equals("N")) {
+				System.out.println(Arrays.toString(strArr))  ;
+				break;
+			}
 		}
 		
 		
