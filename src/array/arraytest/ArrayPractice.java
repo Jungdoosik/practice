@@ -1,0 +1,41 @@
+package array.arraytest;
+
+import java.util.Scanner;
+
+public class ArrayPractice {
+	public void method1() {
+		
+		Scanner sc = new Scanner(System.in);
+		System.out.print("홀수인 양의 정수 입력 : ");
+		int[] arr = new int[sc.nextInt()];
+		
+		//증가하는 for문
+		int num = 1;
+		for(int i = 0; i < arr.length/2; i++) {
+			arr[i] = num++;
+			System.out.print(arr[i] + " ");
+		}
+		//감소하는 for문
+		for(int i = arr.length/2; i < arr.length; i++) {
+			arr[i] = num--;
+		System.out.print(arr[i] + " ");
+		}
+		
+		
+	}
+	public void ArrayPractice2() {
+		Scanner sc = new Scanner(System.in);
+		System.out.print("배열의 크기 : ");
+		String[] strArr = new String[sc.nextInt()];
+		
+		sc.nextLine();
+		
+		for(int i = 0; i < strArr.length; i++) {
+			System.out.println(i+1 +"번째 문자열 : ");
+		}
+		
+		
+	}
+}
+
+
